@@ -10,7 +10,7 @@ pipeline {
       }
       stage('List') {
         steps{      
-           echo 'List...'
+           sh 'pwd'
         }
 
 
@@ -18,7 +18,7 @@ pipeline {
 
    stage('runpy') {
         steps{      
-          sh 'python PyTest_Homework/tests.py'
+          sh '~/Documents/PyTest_Homework/tests.py'
         }
         }
    stage('Create a new build') {
@@ -27,4 +27,4 @@ pipeline {
      }
    }
   }
-} 
+}
