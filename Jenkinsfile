@@ -18,7 +18,7 @@ pipeline {
 
    stage('runpy') {
         steps{      
-          bat 'python tests.py'
+          sh 'python tests.py'
         }
         }
    stage('Create a new build') {
