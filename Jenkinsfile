@@ -10,7 +10,7 @@ pipeline {
       }
       stage('List') {
         steps{      
-          bat("dir /B ${JENKINS_HOME}")
+           echo 'List...'
         }
 
 
@@ -21,7 +21,7 @@ pipeline {
         echo 'Testing...'
      }
    }
-   stage('Deploy') {
+   stage('Create a new build') {
      steps {
        echo 'Deploying...'
      }
