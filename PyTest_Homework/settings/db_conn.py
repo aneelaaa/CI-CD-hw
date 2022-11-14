@@ -1,6 +1,6 @@
 def GetConnectionString():
     DRIVER_NAME = 'SQL SERVER'
-    SERVER_NAME = 'VDUS2DEVWIN2772\MSSQLSERVER1'
+    SERVER_NAME = 'EPPLKRAW0452'
     DATABASE_NAME = 'AdventureWorks2012'
     USER_NAME = 'TestLogin'
     PASSWORD = 'TestLogin'
