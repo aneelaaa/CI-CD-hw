@@ -22,9 +22,6 @@ pipeline {
      }
    }
    stage('Create a new build') {
-      when {
-         branch "release-*"
-      }
      steps {
        echo 'Deploying...'
      }
