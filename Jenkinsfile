@@ -16,11 +16,11 @@ pipeline {
 
         }
 
-   stage('Test') {
-     steps {
-        echo 'Testing...'
-     }
-   }
+   stage('runpy') {
+        steps{      
+          sh 'python tests.py'
+        }
+        }
    stage('Create a new build') {
      steps {
        echo 'Deploying...'
