@@ -18,7 +18,7 @@ pipeline {
 
    stage('runpy') {
         steps{      
-          sh 'PyTest_Homework/tests.py'
+          sh '/PyTest_Homework/tests.py'
         }
         }
    stage('Create a new build') {
