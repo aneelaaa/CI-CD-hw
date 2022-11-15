@@ -18,10 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-       
-        sh "ls -la"
-        sh "cd PyTest_Homework"
-        sh "pytest PyTest_Homework/tests.py"
+        sh "pytest tests.py"
      }
    }
    stage('Deploy') {
