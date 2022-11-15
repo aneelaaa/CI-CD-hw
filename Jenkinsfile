@@ -17,6 +17,7 @@ pipeline {
       stage('Run test.py') {
          steps {
             echo 'Launching simple test...'
+            sh "python --version"
             sh "pytest test.py"
          }
       }
