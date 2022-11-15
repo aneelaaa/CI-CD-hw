@@ -19,7 +19,7 @@ pipeline {
    stage('Test') {
      steps {
         sh "ls -la"
-        sh "pytest tests.py"
+        sh "pytest test.py"
      }
    }
    stage('Deploy') {
