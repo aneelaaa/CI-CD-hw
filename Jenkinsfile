@@ -25,7 +25,7 @@ pipeline {
             sh "git checkout release"
             sh "git merge origin/main"
             sh "git pull origin release"
-            sh "git push origin release"
+            sh "git push origin/release"
          }
       }
    }
