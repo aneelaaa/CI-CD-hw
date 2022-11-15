@@ -23,10 +23,10 @@ pipeline {
          steps {
             echo 'Deploying...'
             sh "git checkout release"
-            sh "git pull origin/main"
+       
             sh "git merge origin/main"
            
-            sh "git push origin release"
+            sh "git push"
          }
       }
    }
