@@ -18,7 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-        sh "cd ${JENKINS_HOME}/workspace/PyTest_Homework"
+        sh "cd ${JENKINS_HOME}/workspace/test_pipeline/PyTest_Homework"
         sh "pytest tests.py"
      }
    }
