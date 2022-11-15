@@ -26,7 +26,7 @@ pipeline {
        
             sh "git merge origin/main"
            
-            sh "git push origin/release"
+            sh "git push origin release"
          }
       }
    }
