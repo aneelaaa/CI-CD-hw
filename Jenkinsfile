@@ -8,12 +8,12 @@ pipeline {
            echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
         }
       }
-      stage('List') {
+      stage('Run .py') {
         steps{
-           sh "dir ${JENKINS_HOME}"
+           sh "python sample.py"
         }
       }
-      stage('Test') {
+      stage('Run test.py') {
          steps {
             echo 'Launching simple test...'
             sh "pytest test.py"
