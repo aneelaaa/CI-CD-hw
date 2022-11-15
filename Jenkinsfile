@@ -15,12 +15,17 @@ pipeline {
       }
       stage('Test') {
          steps {
+            echo 'Launching simple test...'
             sh "pytest test.py"
          }
       }
       stage('Deploy') {
          steps {
             echo 'Deploying...'
+            sh "git checkout release"
+            sh "git merge main"
+            sh "git pull origin release"
+            sh "git push origin release"
          }
       }
    }
