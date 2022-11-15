@@ -27,6 +27,7 @@ pipeline {
             sh "git merge origin/main"
            
             sh "git status"
+            sh "git push origin"
          }
       }
    }
