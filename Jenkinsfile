@@ -18,7 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-        
+        sh "pip install unixODBC"
         sh "ls -la"
         sh "cd PyTest_Homework"
         sh "pytest PyTest_Homework/tests.py"
