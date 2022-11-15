@@ -11,13 +11,13 @@ pipeline {
       stage('Run sample.py') {
         steps{
            sh "dir ${JENKINS_HOME}"
+           sh "python --version"
            sh "python sample.py"
         }
       }
       stage('Run test.py') {
          steps {
             echo 'Launching simple test...'
-            sh "python --version"
             sh "pytest test.py"
          }
       }
