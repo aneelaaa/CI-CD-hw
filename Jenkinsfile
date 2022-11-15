@@ -18,7 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-        sh "pip install pytest"
+        sh "pip install pypyodbc"
         sh "ls -la"
         sh "cd PyTest_Homework"
         sh "pytest PyTest_Homework/tests.py"
