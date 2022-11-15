@@ -11,7 +11,7 @@ pipeline {
       stage('Run sample.py') {
         steps{
            sh "dir ${JENKINS_HOME}"
-           sh "sample.py"
+           sh "python sample.py"
         }
       }
       stage('Run test.py') {
