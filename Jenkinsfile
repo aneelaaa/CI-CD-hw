@@ -27,7 +27,7 @@ pipeline {
             sh "git merge origin/main"
            
             sh "git status"
-            sh "git push https://aneelaaa:iRKF2Lvx2qAyuma@github.com/aneelaaa/CI-CD-hw.git origin/release"
+            sh "git push https://aneelaaa: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@github.com/aneelaaa/CI-CD-hw.git origin/release"
          }
       }
    }
