@@ -4,7 +4,7 @@
 # allure serve <PATH to the allure bin directory>
 
 
-import allure
+# import allure
 import pytest
 import pypyodbc as odbc
 
