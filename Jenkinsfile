@@ -18,6 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
+        sh "ls -la"
         sh "cd ${JENKINS_HOME}/workspace/test_pipeline/PyTest_Homework"
         sh "pytest tests.py"
      }
