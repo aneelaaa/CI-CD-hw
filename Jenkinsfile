@@ -18,6 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
+        sh "pip install pytest"
         sh "ls -la"
         sh "cd PyTest_Homework"
         sh "pytest tests.py"
