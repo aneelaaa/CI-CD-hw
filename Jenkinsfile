@@ -10,21 +10,21 @@ pipeline {
       }
       stage('List') {
         steps{      
-           sh 'pwd'
+          bat("dir /B ${JENKINS_HOME}")
         }
 
 
         }
 
-   stage('runpy') {
-        steps{      
-          sh '/PyTest_Homework/tests.py'
-        }
-        }
-   stage('Create a new build') {
+   stage('Test') {
+     steps {
+        echo 'Testing...'
+     }
+   }
+   stage('Deploy') {
      steps {
        echo 'Deploying...'
      }
    }
   }
-}
+} 
