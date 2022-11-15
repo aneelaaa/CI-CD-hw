@@ -25,9 +25,10 @@ pipeline {
             sh "git checkout release"
        
             sh "git merge origin/main"
-           
+ 
             sh "git status"
-            sh "git push https://github.com/aneelaaa/CI-CD-hw.git origin/release"
+            sh "git remote set-url origin "https://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@github.com/aneelaaa/CI-CD-hw.git"
+            sh "git push origin/release"
          }
       }
    }
