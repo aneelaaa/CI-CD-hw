@@ -18,7 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-        sh "pip install unixodbc"
+        sh "ksh"
         sh "ls -la"
         sh "cd PyTest_Homework"
         sh "pytest PyTest_Homework/tests.py"
