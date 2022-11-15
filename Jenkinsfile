@@ -24,9 +24,9 @@ pipeline {
             echo 'Deploying...'
             sh "git checkout release"
        
-            sh "git merge main"
+            sh "git fetch origin/main"
            
-            sh "git push origin release"
+            sh "git push origin/release release"
          }
       }
    }
