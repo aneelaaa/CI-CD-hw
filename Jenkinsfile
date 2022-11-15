@@ -18,8 +18,7 @@ pipeline {
 
    stage('Test') {
      steps {
-        sh "pip install xmlrunner"
-        sh "ls -la"
+     
         sh "pytest test.py"
      }
    }
