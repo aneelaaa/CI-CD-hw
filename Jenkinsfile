@@ -4,28 +4,24 @@ pipeline {
    stages {
       stage('Build') {
         steps {
-          echo 'Building...'
-          echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
+           echo 'Building...'
+           echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
         }
       }
       stage('List') {
-        steps{      
-          sh "dir ${JENKINS_HOME}"
+        steps{
+           sh "dir ${JENKINS_HOME}"
         }
-
-
-        }
-
-   stage('Test') {
-     steps {
-     
-        sh "pytest test.py"
-     }
+      }
+      stage('Test') {
+         steps {
+            sh "pytest test.py"
+         }
+      }
+      stage('Deploy') {
+         steps {
+            echo 'Deploying...'
+         }
+      }
    }
-   stage('Deploy') {
-     steps {
-       echo 'Deploying...'
-     }
-   }
-  }
 } 
